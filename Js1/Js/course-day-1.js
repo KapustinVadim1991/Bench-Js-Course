@@ -59,17 +59,7 @@
 //     console.log(arguments); // все аргументы
 // }
 
-function setRandomGeneratedPassword(){
-    let password = generatePassword();
-    document.getElementById('password').value = password;
-}
-
-function generatePassword(){
-    let password = '';
-    let symbols = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    for (let i = 0; i < 8; i++){
-        let index = Math.floor(Math.random() * symbols.length);
-        password += symbols[index];
-    }
-    return password;
-}
+// function setRandomGeneratedPassword(){
+//     let password = generatePassword();
+//     document.getElementById('password').value = password;
+// }
