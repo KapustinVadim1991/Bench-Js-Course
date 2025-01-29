@@ -1,0 +1,160 @@
+:root {
+  --header-background-color: #333;
+}
+
+header {
+  background-color: var(--header-background-color);
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 50px;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  margin: 0;
+  list-style: none;
+}
+
+.nav-item {
+  padding: 5px 20px;
+}
+.nav-link {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  color: rgba(223, 223, 107, 0.767);
+}
+
+.hamburger {
+  cursor: pointer;
+  display: none;
+}
+
+.line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  transition: all 0.3s;
+}
+
+.hamburger:hover .line {
+  background-color: rgba(223, 223, 107, 0.767);
+  margin: 6px 0;
+}
+
+.hamburger:hover.active .line {
+  margin: 5px 0;
+}
+
+.hamburger.active .line:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .line:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  margin-top: 50px;
+  width: 100%;
+  height: 100%;
+}
+
+section {
+  height: calc(100vh - 10rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 5rem 3rem;
+}
+
+#section1 {
+  background-color: green;
+  color: wheat;
+}
+
+#section2 {
+  background-color: rgb(232, 146, 35);
+  color: rgb(255, 255, 255);
+}
+
+#section3 {
+  background-color: rgb(77, 44, 221);
+  color: rgb(218, 235, 161);
+}
+
+#section4 {
+  background-color: rgb(57, 197, 219);
+  color: rgb(108, 54, 54);
+}
+
+.sec {
+  transition: 1s all;
+  transform: translateY(0rem);
+}
+
+.sec.pop {
+  transform: translateY(10rem);
+}
+
+@media screen and (max-width: 800px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-menu {
+    position: fixed;
+    padding: 0;
+    flex-direction: column;
+    right: -100%;
+    top: 50px;
+    background-color: var(--header-background-color);
+    width: 100%;
+    transition: 0.4s all;
+  }
+
+  .nav-menu.open {
+    right: 0;
+  }
+}
