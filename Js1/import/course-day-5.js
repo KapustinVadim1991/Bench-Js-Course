@@ -8,6 +8,6 @@ import test from "./lib.js";
 
 // this js file is connected via .html file
 
-greet("John"); // Hi John
-console.log(test.a1); // 32
-console.log(test.a2); // hello
+// greet("John"); // Hi John
+// console.log(test.a1); // 32
+// console.log(test.a2); // hello
